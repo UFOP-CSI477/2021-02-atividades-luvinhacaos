@@ -1,0 +1,82 @@
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+  }
+  h3 {
+    text-align: center;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+  }
+  h6 {
+    color: rgb(0, 0, 0);
+  }
+  body {
+    background-color: rgb(197, 0, 0);
+  }
+  #container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+  }
+  
+  #envio {
+    width: 25%;
+    height: 430px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(28, 29, 28);
+    padding: 10px;
+    color: rgb(0, 0, 0);
+  }
+  
+  #pagar {
+    width: 25%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(28, 29, 28);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #receber {
+    width: 25%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(28, 29, 28);
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  #select-banco,
+  #select-chave,
+  #select-operacao {
+    margin: auto;
+    height: 30px;
+    width: 90%;
+  }
+  
+  #chave,
+  #valor,
+  #data {
+    margin: auto;
+    width: 90%;
+    height: 30px;
+  }
+  
+  #btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #enviar,
+  #finalizar {
+    width: 30%;
+    margin: 0px 5px;
+  }

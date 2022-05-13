@@ -1,0 +1,61 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.inpt1{
+    width: 15vw;
+    margin-left: 10px;
+}
+
+.inpt2 {
+    width: 15vw;
+    margin-left: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+h5 {
+    text-align: center;
+    margin-bottom: 1em;
+
+}
+
+.converter {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+.resultado {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+body {
+    background-color: rgb(52, 104, 0);
+}
+
+.btn btn-primary mb-3 {
+    color: black;
+}
