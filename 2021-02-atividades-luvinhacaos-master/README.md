@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Matheus de Castro Vargas Pinto
+- Matrícula: 17.1.8093
+- Curso: Sistemas de Informação
+- Semestre/Ano correntes: 5 anos
+- Link para o seu GitHub: https://github.com/luvinhacaos
 
 ## [Projeto final:](./Projeto/README.md)
 
