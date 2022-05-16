@@ -1,18 +1,6 @@
-function desabilita(estado){
-    var input = document.querySelector("#date");
-    input.disabled =  estado;
-}
+function preencherSelectMoeda1(data){
 
-function limparSelect(campo){
-    while(campo.length > 1){
-        campo.remove(1);
-    }
-}
-
-function preencherMoedas1(data){
-
-    let moedas = document.getElementById("moeda1");
-    limparSelect(moedas);
+    let moeda = document.getElementById("moeda1");
 
     for(let index in data.value){
         
@@ -20,24 +8,23 @@ function preencherMoedas1(data){
 
         let option = document.createElement("option");
         option.value = nomeFormatado;
-        option.innerHTML = `${simbolo}-${nomeFormatado}`;
+        option.innerHTML = `(${simbolo}) ${nomeFormatado}`;
 
-        moedas.appendChild(option);
+        moeda.appendChild(option);
     }
 }
 
-function carregarMoedas1(){
+function carregarMoeda1(){
 
-    fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$skip=0&$format=json&$select=simbolo,nomeFormatado ")
+    fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$skip=0&$format=json&$select=simbolo,nomeFormatado")
         .then(response => response.json())
-        .then(data => preencherMoedas1(data))
+        .then(data => preencherSelectMoeda1(data))
         .catch(error => console.error(error))
 }
 
-function preencherMoedas2(data){
+function preencherSelectMoeda2(data){
 
-    let moedas = document.getElementById("moeda2");
-    limparSelect(moedas);
+    let moeda = document.getElementById("moeda2");
 
     for(let index in data.value){
         
@@ -45,20 +32,34 @@ function preencherMoedas2(data){
 
         let option = document.createElement("option");
         option.value = nomeFormatado;
-        option.innerHTML = `${simbolo}-${nomeFormatado}`;
+        option.innerHTML = `(${simbolo}) ${nomeFormatado}`;
 
-        moedas.appendChild(option);
+        moeda.appendChild(option);
     }
 }
 
-function carregarMoedas2(){
+function carregarMoeda2(){
 
-    fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$skip=0&$format=json&$select=simbolo,nomeFormatado ")
+    fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$skip=0&$format=json&$select=simbolo,nomeFormatado")
+        .then(response => response.json())
+        .then(data => preencherSelectMoeda2(data))
+        .catch(error => console.error(error))
+}
+
+function carregarMoedas2(){
+    fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$skip=0&$format=json&$select=simbolo,nomeFormatado,tipoMoeda")
         .then(response => response.json())
         .then(data => preencherMoedas2(data))
         .catch(error => console.error(error))
 }
 
-function converter(valorMoeda1){
-    console.log(valorMoeda1);
+async function getValor(){
+    const response = await fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoMoedaDia(moeda=@moeda,dataCotacao=@dataCotacao)?@moeda=''&@dataCotacao=''&$top=100&$format=json&$select=cotacaoCompra")
+        .then(response => response.json())
+        .then(data => {
+            return data.value[0].cotacaoCompra;
+        })
+        .catch(error => console.error(error))
+    return response
 }
+
