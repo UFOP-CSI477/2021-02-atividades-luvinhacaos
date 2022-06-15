@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="set-interval.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <title>Relógio</title>
+
+
+  <script>
+
+  
+
+    function exibirHorario () {
+
+      let horario = new Date()
+      let hora = horario.getHours()
+      let minutos = horario.getMinutes()
+      let segundos = horario.getSeconds()
+      let dia = ("0" + horario.getDate()).slice(-2);
+      let mes = horario.getMonth()
+      let ano = horario.getFullYear()
+
+      let agora = `${hora} : ${minutos} : ${segundos}`
+      document.getElementById('horas').innerHTML = agora
+
+      let data = `${dia} / ${mes+1} / ${ano}`
+      document.getElementById('data').innerHTML = data
+
+    }
+
+    
+    function iniciar() {
+      setInterval(exibirHorario)
+    }
+
+  </script>
+
+
+</head>
+<body>
+  
+  <h1>
+    Relógio Completo
+  </h1>
+  
+  <div id="linha"> </div>
+  
+  <div id="exibe">
+    <h3 id="horas"></h3>
+    <h3 id="data"></h3>
+    <input type="button" value="Exibir" id="btn" onclick="iniciar()">
+  </div>
+
+</body>
+</html>

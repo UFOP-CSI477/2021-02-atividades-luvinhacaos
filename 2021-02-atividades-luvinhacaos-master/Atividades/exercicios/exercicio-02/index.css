@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  font: normal 18px arial;
+  align-content: center;
+  height: 10vh;
+  margin-bottom: 20px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+#dados {
+  background-color: black;
+  color: whitesmoke;
+  height: 50vh;
+  width: 50vw;
+  margin: 90px auto;
+  padding: 20px;
+  border-radius: 10px;
+  font: normal 16px arial;
+  text-align: center;
+}
+
+img {
+  width: 30%;
+  height: 40%;
+}
+
+h1 {
+  font: normal 40px arial;
+  text-align: center;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="validacao-form.css">
+  <title>Validação</title>
+
+  <script>
+
+    function validaEmail(email) {  // uso de RegEx para verificar o padrão na string recebida na variavel email
+      var expressao = /\S+@\S+\.\S+/;
+      return expressao.test(email);
+    }
+
+    function validar() {
+
+      let nome = document.getElementById('nome').value
+      let email = document.getElementById('email').value
+      let idade = document.getElementById('idade').value
+
+      if(nome.length == 0 || email.length == 0 || idade.length == 0) {
+        window.alert('Preencha todos os dados para prosseguir!')
+      }
+
+      else if (!validaEmail(email)){
+        window.alert('Insira um e-mail no padrão correto! Exemplo b@b.com')
+      }
+      else {
+        window.alert(`Seus dados estão inseridos corretamente!`)
+      }
+    }
+
+  </script>
+
+</head>
+<body>
+
+  <h1> Validar Form's </h1>
+  <div id="linha"> </div>
+
+  <form action="post">
+
+    <input type="text" value="" id="nome" placeholder="Insira seu nome">
+    <input type="email" value="" id="email" placeholder="Insira seu e-mail">
+    <input type="number" value="" id="idade" placeholder="Insira sua idade">
+    
+  </form>
+
+  <input type="button" value="Validar" id="btn" onclick="validar()">
+
+</body>
+</html>

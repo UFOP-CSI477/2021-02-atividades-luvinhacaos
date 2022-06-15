@@ -1,0 +1,22 @@
+h1,
+h3 {
+  text-align: center;
+  font: normal 40px arial;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#linha {
+  height: 1px;
+  width: 70%;
+  background-color: black;
+  margin: 30px auto;
+}
+#btn {
+  width: 60%;
+  height: 30px;
+  margin: 50px 20%;
+  background-color: #343a40;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+}

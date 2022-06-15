@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Form</title>
+
+
+  <script>
+
+    function Time (nome, pontuacao, colocacao) {
+      this.nome = nome
+      this.pontuacao = pontuacao
+      this.colocacao = colocacao
+    }
+
+    function exibirDados() {
+      const nome = document.formDados.nome.value
+      const pontuacao = document.formDados.pontuacao.value
+      const colocacao = document.formDados.colocacao.value
+
+      const time = new Time(nome, pontuacao, colocacao)
+      window.alert(`Informações sobre seu time; Nome: ${time.nome}! Pontuação: ${time.pontuacao}! Colocação ${time.colocacao}!`)
+
+      if (time.colocacao >= 1 && time.colocacao<= 4) {
+        window.alert('Seu time está ganhando a vaga na libertadores!')
+      }
+      else if (time.colocacao >= 17 && time.colocacao<= 20) {
+        window.alert('Seu time está sendo rebaixado!');
+
+      }
+     
+    }
+  </script>
+
+</head>
+<body>
+  <h1>
+    Formulário
+  </h1>
+  
+  <div id="linha"> </div>
+
+  <form action="post" name="formDados">
+    <input type="text" name="nome" placeholder="Nome" class="inpt">
+    <input type="text" name="pontuacao" placeholder="Pontuação" class="inpt">
+    <input type="text" name="colocacao" placeholder="Colocação" class="inpt">
+  </form>
+
+  <input type="button" value="Exibir" class="btn btn-dark" onclick="exibirDados()">
+
+</body>
+</html>

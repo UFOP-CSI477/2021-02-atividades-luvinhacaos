@@ -1,0 +1,61 @@
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  font: normal 18px arial;
+  align-content: center;
+  height: 10vh;
+  margin-bottom: 20px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  margin-top: 0;
+  color: black;
+  border-top: 0ch;
+  border-left: 0ch;
+  border-right: 0ch;
+  font: normal 30px arial;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  font: normal 18px arial;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+td,
+th {
+  padding: 10px;
+}
+
+th {
+  font-weight: bold;
+}
+tbody tr:hover {
+  background-color: rgb(203, 203, 248);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font: normal 18px arial;
+}

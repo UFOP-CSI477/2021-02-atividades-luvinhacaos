@@ -1,0 +1,44 @@
+td {
+  width: 100px;
+  text-align: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+label {
+  text-align: center;
+}
+
+th {
+  text-align: center;
+  width: 10%;
+}
+
+form {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(2, 36, 44);
+  margin: 100px auto;
+  color: white;
+  padding: 30px;
+}
+
+input {
+  width: 50%;
+  margin: 10px auto;
+}
+
+#btn-cadastrar {
+  margin-top: 30px;
+}

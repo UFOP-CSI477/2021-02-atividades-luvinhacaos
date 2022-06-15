@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="pessoas.css">
+  <title>Cadastro de  Pessoas</title>
+</head>
+
+
+
+<body>
+  <header >
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="estados.html" target="_blank">Estados</a></li>
+      <li><a href="cidades.html" target="blank">Cidades</a></li>
+      <li><a href="produtos.html" target="blank">Produtos</a></li>
+      <li><a href="pessoas.html" target="blank">Pessoas</a></li>
+      <li><a href="compras.html" target="blank">Compras</a></li>
+      <li><a href="perfil.html" target="blank">Perfil</a></li>
+      <li><a href="sair.html" target="blank">Sair</a></li>
+    </ul>
+    
+  </header>
+
+
+  <h1>Cadastro</h1>
+
+
+
+  
+    <form method="get" action="validar.html">
+
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome da pessoa">
+        </div>
+
+        <div>
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco">
+        </div>
+
+        <div>
+            <label>Gênero:</label>
+
+            <div>
+                <input type="radio" name="genero" id="feminino" value="F">
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" id="masculino" value="M">
+                <label for="masculino">Masculino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" id="naobinario" value="NB">
+                <label for="naobinario">Não binário</label>
+            </div>
+
+            <div>
+                <input type="radio" name="genero" id="semresposta" value="SR">
+                <label for="semresposta">Prefiro não informar</label>
+            </div>
+        </div>
+
+        <div>
+
+            <label>Áreas de interesse:</label>
+
+            <div>
+                <input type="checkbox" name="area[0]" id="web">
+                <label for="web">Sistemas Web</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="area[1]" id="db">
+                <label for="db">Banco de dados</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="area[2]" id="redes">
+                <label for="redes">Redes</label>
+            </div>
+
+        </div>
+
+        <input type="submit" value="Cadastrar" id="btn-cadastro">
+        <input type="reset" value="Limpar" id="btn-limpar">
+
+    </form>
+
+    <a href="index.html">Voltar</a>
+</body>
+
+
+
+
+</html>

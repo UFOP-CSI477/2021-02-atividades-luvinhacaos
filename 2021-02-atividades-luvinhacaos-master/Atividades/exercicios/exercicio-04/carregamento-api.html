@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="carregamento-api.css">
+  <title>API</title>
+</head>
+
+<body>
+
+  <h1>
+    API
+  </h1>
+
+  <div id="linha"> </div>
+
+  <form action="">
+
+    <input type="button" value="Carregar Estados" class="btn" onclick="carregarUF()">
+
+    <select id="estados" onchange="carregarCidade()">
+      <option value=""> Selecione seu estado </option>
+    </select>
+
+
+    <select id="cidades">
+      <option value=""> Selecione sua cidade </option>
+    </select>
+
+  </form>
+
+
+  <script src="api.js"></script>
+
+</body>
+
+</html>
