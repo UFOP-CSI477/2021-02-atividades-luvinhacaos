@@ -1,0 +1,61 @@
+:root {
+    --primary: #A33B39,
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+}
+
+.sidebar {
+    background: #7952b3;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-container {
+    padding: 1em;
+}
+
+.sidebar-container2 {
+    padding: 1em 0;
+}
+
+.container-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-bottom: 2px solid rgba(0, 0, 0, .15);
+}
+
+.sidebar h1 {
+    font-size: 22px;
+}
+
+.sidebar nav li {
+    display: block;
+    list-style: none;
+}
+
+.sidebar a {
+    padding: 0 1.25em;
+    color: #FFF;
+    text-decoration: none;
+    line-height: 2.5;
+    font-size: 20px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background: rgba(0, 0, 0, .15)
+}
+
+.container-conteudo {
+    height: calc(100vh - 80px);
+}
+
+.main {
+    background: #FEFEFE;
+}
